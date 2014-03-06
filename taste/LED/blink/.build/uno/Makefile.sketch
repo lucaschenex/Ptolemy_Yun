@@ -1,0 +1,14 @@
+
+
+
+
+
+.build/uno/src/LED_blink_c.cpp : src/LED_blink_c.ino
+	@mkdir -p .build/uno/src
+	@echo [93msrc/LED_blink_c.ino[0m
+	@/usr/local/bin/ino preproc  -o $@ $^
+
+
+all : .build/uno/src/LED_blink_c.cpp
+	@true
+
