@@ -1,0 +1,5 @@
+stty -f /dev/tty.usbmodem1421 1200; sleep 1s; /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin/avrdude -C /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/etc/avrdude.conf -v -v -v -v -pm32u4 -cavr109 -P /dev/tty.usbmodem1421 -b57600 -D -U flash:w:LED_blink_c.cpp.hex:i
+
+w/ symlink
+
+stty -f /dev/tty.usbmodem1421 1200; sleep 1s; avrdude -C avrdude.conf -v -v -v -v -pm32u4 -cavr109 -P /dev/tty.usbmodem1421 -b57600 -D -U flash:w:LED_blink_c.cpp.hex:i
